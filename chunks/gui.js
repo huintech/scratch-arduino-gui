@@ -146,8 +146,38 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
 
+var onClickLinkLogo = function onClickLinkLogo() {
+  window.open('https://github.com/OttawaSTEM/scratch-arduino-link/releases', '_blank');
+};
+
 var onClickLogo = function onClickLogo() {
-  window.location = 'https://scratch.mit.edu';
+  window.open('https://ottawastem.com', '_blank');
+};
+
+var onClickSignin = function onClickSignin() {
+  // window.open('https://ottawastem.com/accounts/login/', '_self'); 
+  window.open('http://127.0.0.1:8000/accounts/login/', '_self');
+};
+
+var onClickLogOut = function onClickLogOut() {
+  // window.open('https://ottawastem.com/accounts/logout/', '_self'); 
+  window.open('http://127.0.0.1:8000/accounts/logout/', '_self');
+};
+
+var onClickCheckUpdate = function onClickCheckUpdate() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click check update');
+};
+
+var onClickUpgrade = function onClickUpgrade() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click upgrade');
+};
+
+var onClickClearCache = function onClickClearCache() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click clear cahce');
+};
+
+var onClickInstallDriver = function onClickInstallDriver() {
+  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click install driver');
 };
 
 var handleTelemetryModalCancel = function handleTelemetryModalCancel() {
@@ -201,14 +231,21 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
     canSave: false,
     onTelemetryModalCancel: handleTelemetryModalCancel,
     onTelemetryModalOptIn: handleTelemetryModalOptIn,
-    onTelemetryModalOptOut: handleTelemetryModalOptOut
+    onTelemetryModalOptOut: handleTelemetryModalOptOut,
+    onClickCheckUpdate: onClickCheckUpdate,
+    onClickUpgrade: onClickUpgrade,
+    onClickClearCache: onClickClearCache,
+    onClickInstallDriver: onClickInstallDriver
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
-    canEditTitle: true,
-    backpackVisible: true,
+    canEditTitle: true // backpackVisible
+    ,
     showComingSoon: true,
     backpackHost: backpackHost,
     canSave: false,
-    onClickLogo: onClickLogo
+    onClickLinkLogo: onClickLinkLogo,
+    onClickLogo: onClickLogo,
+    onClickSignin: onClickSignin,
+    onClickLogOut: onClickLogOut
   }), appTarget);
 });
 
