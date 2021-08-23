@@ -91,8 +91,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-Object(_lib_analytics__WEBPACK_IMPORTED_MODULE_6__["initialAnalytics"])(); // Register "base" page view
+ // Register "base" page view
 
 _lib_analytics__WEBPACK_IMPORTED_MODULE_6__["default"].pageview('/');
 var appTarget = document.createElement('div');
@@ -147,28 +146,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
 
-var onClickLinkLogo = function onClickLinkLogo() {
-  window.open('https://github.com/OttawaSTEM/scratch-arduino-link/releases', '_blank');
-};
-
 var onClickLogo = function onClickLogo() {
-  window.open('https://ottawastem.com', '_blank');
-};
-
-var onClickCheckUpdate = function onClickCheckUpdate() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click check update');
-};
-
-var onClickUpgrade = function onClickUpgrade() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click upgrade');
-};
-
-var onClickClearCache = function onClickClearCache() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click clear cahce');
-};
-
-var onClickInstallDriver = function onClickInstallDriver() {
-  Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click install driver');
+  window.location = 'https://scratch.mit.edu';
 };
 
 var handleTelemetryModalCancel = function handleTelemetryModalCancel() {
@@ -222,18 +201,13 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
     canSave: false,
     onTelemetryModalCancel: handleTelemetryModalCancel,
     onTelemetryModalOptIn: handleTelemetryModalOptIn,
-    onTelemetryModalOptOut: handleTelemetryModalOptOut,
-    onClickCheckUpdate: onClickCheckUpdate,
-    onClickUpgrade: onClickUpgrade,
-    onClickClearCache: onClickClearCache,
-    onClickInstallDriver: onClickInstallDriver
+    onTelemetryModalOptOut: handleTelemetryModalOptOut
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
-    canEditTitle: true // backpackVisible
-    ,
+    canEditTitle: true,
+    backpackVisible: true,
     showComingSoon: true,
     backpackHost: backpackHost,
     canSave: false,
-    onClickLinkLogo: onClickLinkLogo,
     onClickLogo: onClickLogo
   }), appTarget);
 });
