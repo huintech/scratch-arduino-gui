@@ -156,13 +156,13 @@ var onClickLogo = function onClickLogo() {
 
 var onClickSignin = function onClickSignin() {
   {
-    "True" === undefined ? window.open('http://ottawastem.com/accounts/login/', '_self') : window.open('http://127.0.0.1:8000/accounts/login/', '_self');
+     true ? window.open('http://127.0.0.1:8000/accounts/login/', '_self') : undefined;
   }
 };
 
 var onClickLogOut = function onClickLogOut() {
   {
-    "True" === undefined ? window.open('http://ottawastem.com/accounts/logout/', '_self') : window.open('http://127.0.0.1:8000/accounts/logout/', '_self');
+     true ? window.open('http://127.0.0.1:8000/accounts/logout/', '_self') : undefined;
   }
 };
 
