@@ -166,6 +166,13 @@ var onClickLogOut = function onClickLogOut() {
   }
 };
 
+var onClickRemix = function onClickRemix(projectId) {
+  console.log(projectId);
+  {
+    "undefined".trim() == 'development' ? window.open('http://127.0.0.1:8000/scratch/project/' + projectId + '/remix/', '_self') : window.open('http://ottawastem.com/scratch/project/' + projectId + '/remix/', '_self');
+  }
+};
+
 var onClickCheckUpdate = function onClickCheckUpdate() {
   Object(_lib_log_js__WEBPACK_IMPORTED_MODULE_6__["default"])('User click check update');
 };
@@ -246,6 +253,7 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
     canSave: false,
     onClickLinkLogo: onClickLinkLogo,
     onClickLogo: onClickLogo,
+    onClickRemix: onClickRemix,
     onClickSignin: onClickSignin,
     onClickLogOut: onClickLogOut
   }), appTarget);
