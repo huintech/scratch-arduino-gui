@@ -160,7 +160,7 @@ var onClickSignin = function onClickSignin() {
   }
 };
 
-var onClickLogOut = function onClickLogOut() {
+var onClickSignOut = function onClickSignOut() {
   {
     "undefined".trim() == 'development' ? window.open('http://127.0.0.1:8000/accounts/logout/', '_self') : window.open('http://ottawastem.com/accounts/logout/', '_self');
   }
@@ -255,7 +255,7 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
     onClickLogo: onClickLogo,
     onClickRemix: onClickRemix,
     onClickSignin: onClickSignin,
-    onClickLogOut: onClickLogOut
+    onClickSignOut: onClickSignOut
   }), appTarget);
 });
 
