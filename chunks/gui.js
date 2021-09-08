@@ -91,7 +91,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // Register "base" page view
+
+Object(_lib_analytics__WEBPACK_IMPORTED_MODULE_6__["initialAnalytics"])(); // Register "base" page view
 
 _lib_analytics__WEBPACK_IMPORTED_MODULE_6__["default"].pageview('/');
 var appTarget = document.createElement('div');
