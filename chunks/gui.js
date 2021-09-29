@@ -148,11 +148,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
 var onClickLinkLogo = function onClickLinkLogo() {
-  window.open('https://github.com/OttawaSTEM/scratch-arduino-link/releases', '_blank');
+  window.open('https://github.com/OttawaSTEM/scratch-arduino-link/releases/', '_blank');
 };
 
 var onClickLogo = function onClickLogo() {
-  window.open('https://ottawastem.com');
+  window.open('https://ottawastem.com/scratch/');
 };
 
 var onClickSignin = function onClickSignin() {
