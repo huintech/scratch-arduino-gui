@@ -152,7 +152,7 @@ var onClickLinkLogo = function onClickLinkLogo() {
 };
 
 var onClickLogo = function onClickLogo() {
-  window.open('https://ottawastem.com/scratch/');
+  window.open('https://ottawastem.com/scratch/', '_self');
 };
 
 var onClickSignin = function onClickSignin() {
