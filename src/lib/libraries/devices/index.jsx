@@ -7,6 +7,11 @@ import arduinoBaseToolBox from './baseToolbox/arduino';
 
 import unselectDeviceIconURL from './unselectDevice/unselectDevice.png';
 
+// add coconut
+import coconutIconURL from './coconut/coconut.png';
+import coconutConnectionIconURL from './coconut/coconut-illustration.svg';
+import coconutConnectionSmallIconURL from './coconut/coconut-small.svg';
+
 import ottoRobotBasicIconURL from './ottoRobotBasic/ottorobotbasic.png';
 import ottoRobotBasicConnectionIconURL from './ottoRobotBasic/ottorobotbasic-illustration.svg';
 import ottoRobotBasicConnectionSmallIconURL from './ottoRobotBasic/ottorobotbasic-small.svg';
@@ -59,6 +64,43 @@ const deviceData = [
         tags: ['realtime']
     },
     {
+        name: 'Coconut-s (Stepper motor)',
+        deviceId: 'coconut',
+        manufactor: 'coco-nut.kr',
+        leanMore: 'http://coco-nut.kr',
+        type: 'arduino',
+        iconURL: coconutIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Coconut-s, get started with robot project."
+                description="Description for the Coconut-s"
+                id="gui.device.coconut.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        serialportRequired: true,
+        defaultBaudRate: '115200',
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: coconutConnectionIconURL,
+        connectionSmallIconURL: coconutConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their arduino."
+                id="gui.device.arduino.connectingMessage"
+            />
+        ),
+        baseToolBoxXml: arduinoBaseToolBox,
+        programMode: ['realtime', 'upload'],
+        programLanguage: ['block', 'c', 'cpp'],
+        tags: ['robot'],
+        helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
+    },
+    {
         name: 'Otto Robot - Basic',
         deviceId: 'ottoBasic',
         manufactor: 'arduino.cc',
@@ -93,7 +135,7 @@ const deviceData = [
         programMode: ['realtime', 'upload'],
         programLanguage: ['block', 'c', 'cpp'],
         tags: ['robot'],
-        helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
+        helpLink: 'http://coco-nut.kr'
     },
     {
         name: 'LED',
@@ -132,7 +174,7 @@ const deviceData = [
         programLanguage: ['block', 'c', 'cpp'],
         tags: ['kit'],
         helpLink: 'https://store.arduino.cc/usa/arduino-nano'
-    },    
+    },
     {
         name: 'Arduino Uno',
         deviceId: 'arduinoUno',
@@ -281,7 +323,7 @@ const deviceData = [
         programLanguage: ['block', 'python'],
         tags: ['arduino'],
         helpLink: 'https://arduino-esp8266.readthedocs.io/en/3.0.0/index.html'
-    } 
+    }
 ];
 
 /**
