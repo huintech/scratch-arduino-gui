@@ -95,10 +95,11 @@ const deviceData = [
             />
         ),
         baseToolBoxXml: arduinoBaseToolBox,
-        programMode: ['realtime', 'upload'],
+        // programMode: ['realtime', 'upload'],
+        programMode: [],
         programLanguage: ['block', 'c', 'cpp'],
         tags: ['robot'],
-        helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
+        helpLink: 'http://coco-nut.kr'
     },
     {
         name: 'Otto Robot - Basic',
