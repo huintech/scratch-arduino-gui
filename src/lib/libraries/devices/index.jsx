@@ -91,7 +91,7 @@ const deviceData = [
             <FormattedMessage
                 defaultMessage="Connecting"
                 description="Message to help people connect to their arduino."
-                id="gui.device.arduino.connectingMessage"
+                id="gui.device.coconut.connectingMessage"
             />
         ),
         baseToolBoxXml: arduinoBaseToolBox,
