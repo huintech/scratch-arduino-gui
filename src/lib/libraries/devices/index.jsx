@@ -20,18 +20,6 @@ import arduinoUnoIconURL from './arduinoUno/arduinoUno.png';
 import arduinoUnoConnectionIconURL from './arduinoUno/arduinoUno-illustration.svg';
 import arduinoUnoConnectionSmallIconURL from './arduinoUno/arduinoUno-small.svg';
 
-import arduinoNanoIconURL from './arduinoNano/arduinoNano.png';
-import arduinoNanoConnectionIconURL from './arduinoNano/arduinoNano-illustration.svg';
-import arduinoNanoConnectionSmallIconURL from './arduinoNano/arduinoNano-small.svg';
-
-import esp32IconURL from './esp32/esp32.png';
-import esp32ConnectionIconURL from './esp32/esp32-illustration.svg';
-import esp32ConnectionSmallIconURL from './esp32/esp32-small.svg';
-
-import esp8266IconURL from './esp8266/esp8266.png';
-import esp8266ConnectionIconURL from './esp8266/esp8266-illustration.svg';
-import esp8266ConnectionSmallIconURL from './esp8266/esp8266-small.svg';
-
 import FastLEDIconURL from './FastLED/FastLED.png';
 import FastLEDConnectionIconURL from './FastLED/FastLED-illustration.svg';
 import FastLEDConnectionSmallIconURL from './FastLED/FastLED-small.svg';
@@ -90,7 +78,7 @@ const deviceData = [
         connectingMessage: (
             <FormattedMessage
                 defaultMessage="Connecting"
-                description="Message to help people connect to their arduino."
+                description="Message to help people connect to their coconut."
                 id="gui.device.coconut.connectingMessage"
             />
         ),

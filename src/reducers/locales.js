@@ -22,7 +22,6 @@ const reducer = function (state, action) {
         return Object.assign({}, state, {
             isRtl: isRtl(action.locale),
             locale: action.locale,
-            // locale: 'en',
             messagesByLocale: state.messagesByLocale,
             messages: state.messagesByLocale[action.locale]
         });
@@ -30,7 +29,6 @@ const reducer = function (state, action) {
         return Object.assign({}, state, {
             isRtl: state.isRtl,
             locale: state.locale,
-            // locale: 'en',
             messagesByLocale: action.messagesByLocale,
             messages: action.messagesByLocale[state.locale]
         });
