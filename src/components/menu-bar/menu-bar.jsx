@@ -525,7 +525,7 @@ class MenuBar extends React.Component {
         );
         // Show the About button only if we have a handler for it (like in the desktop app)
         const aboutButton = this.buildAboutMenu(this.props.onClickAbout);
-        // TODO: must change coconut log
+        // TODO: must change coconutS log
         return (
             <Box
                 className={classNames(

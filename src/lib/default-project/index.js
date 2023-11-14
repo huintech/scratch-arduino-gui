@@ -51,6 +51,6 @@ const defaultProject = translator => {
         dataFormat: 'SVG',
         data: encoder.encode(costume2)
     }];
-}; // TODO: coconut svg 추가
+}; // TODO: coconutS svg 추가
 
 export default defaultProject;

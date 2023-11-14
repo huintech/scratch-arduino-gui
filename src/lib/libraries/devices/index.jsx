@@ -7,10 +7,10 @@ import arduinoBaseToolBox from './baseToolbox/arduino';
 
 import unselectDeviceIconURL from './unselectDevice/unselectDevice.png';
 
-// add coconut
-import coconutIconURL from './coconut/coconut.png';
-import coconutConnectionIconURL from './coconut/coconut-illustration.svg';
-import coconutConnectionSmallIconURL from './coconut/coconut-small.svg';
+// add coconutS
+import coconutIconURL from './coconutS/coconut.png';
+import coconutConnectionIconURL from './coconutS/coconut-illustration.svg';
+import coconutConnectionSmallIconURL from './coconutS/coconut-small.svg';
 
 import ottoRobotBasicIconURL from './ottoRobotBasic/ottorobotbasic.png';
 import ottoRobotBasicConnectionIconURL from './ottoRobotBasic/ottorobotbasic-illustration.svg';
@@ -52,8 +52,8 @@ const deviceData = [
         tags: ['realtime']
     },
     {
-        name: 'Coconut-s (Stepper motor)',
-        deviceId: 'coconut',
+        name: 'Coconut-S (Stepper motor)',
+        deviceId: 'coconutS',
         manufactor: 'coco-nut.kr',
         leanMore: 'http://coco-nut.kr',
         type: 'arduino',
@@ -78,7 +78,7 @@ const deviceData = [
         connectingMessage: (
             <FormattedMessage
                 defaultMessage="Connecting"
-                description="Message to help people connect to their coconut."
+                description="Message to help people connect to their Coconut-S."
                 id="gui.device.coconut.connectingMessage"
             />
         ),

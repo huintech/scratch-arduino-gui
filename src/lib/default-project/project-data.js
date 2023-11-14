@@ -113,7 +113,7 @@ const projectData = translateFunction => {
             vm: '0.1.0',
             agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36' // eslint-disable-line max-len
         }
-    }); // TODO: coconut svg 추가
+    }); // TODO: coconutS svg 추가
 };
 
 
