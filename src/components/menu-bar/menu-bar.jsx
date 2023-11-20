@@ -553,6 +553,7 @@ class MenuBar extends React.Component {
                                 className={styles.languageIcon}
                                 src={languageIcon}
                             />
+                            {/*Language*/}
                             <img
                                 className={styles.languageCaret}
                                 src={dropdownCaret}
@@ -575,6 +576,10 @@ class MenuBar extends React.Component {
                                 defaultMessage="File"
                                 description="Text for file dropdown menu"
                                 id="gui.menuBar.file"
+                            />
+                            <img
+                                className={styles.languageCaret}
+                                src={dropdownCaret}
                             />
                             <MenuBarMenu
                                 className={classNames(styles.menuBarMenu)}
@@ -631,7 +636,7 @@ class MenuBar extends React.Component {
                             </MenuBarMenu>
                         </div>
                     )}
-                    <Divider className={classNames(styles.divider)} />
+                    {/*<Divider className={classNames(styles.divider)} />*/}
                     <div
                         aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
                         className={classNames(styles.menuBarItem, styles.hoverable)}
