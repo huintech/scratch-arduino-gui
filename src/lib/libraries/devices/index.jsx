@@ -56,7 +56,7 @@ const deviceData = [
             <FormattedMessage
                 defaultMessage="Coconut-S"
                 description="Name for Coconut-S deivce"
-                id="gui.device.coconut.deviceName"
+                id="gui.device.coconut.device.name"
             />
         ),
         deviceId: 'coconutS',
