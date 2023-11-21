@@ -76,7 +76,7 @@ const StageHeaderComponent = function (props) {
                     target="_blank"
                 >
                     <img
-                        alt="Scratch Arduino"
+                        alt="Scratch COCONUT"
                         src={scratchLogo}
                     />
                 </a>

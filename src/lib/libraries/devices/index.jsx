@@ -12,21 +12,21 @@ import coconutIconURL from './coconutS/coconut.png';
 import coconutConnectionIconURL from './coconutS/coconut-illustration.svg';
 import coconutConnectionSmallIconURL from './coconutS/coconut-small.svg';
 
-import ottoRobotBasicIconURL from './ottoRobotBasic/ottorobotbasic.png';
-import ottoRobotBasicConnectionIconURL from './ottoRobotBasic/ottorobotbasic-illustration.svg';
-import ottoRobotBasicConnectionSmallIconURL from './ottoRobotBasic/ottorobotbasic-small.svg';
-
-import arduinoUnoIconURL from './arduinoUno/arduinoUno.png';
-import arduinoUnoConnectionIconURL from './arduinoUno/arduinoUno-illustration.svg';
-import arduinoUnoConnectionSmallIconURL from './arduinoUno/arduinoUno-small.svg';
-
-import FastLEDIconURL from './FastLED/FastLED.png';
-import FastLEDConnectionIconURL from './FastLED/FastLED-illustration.svg';
-import FastLEDConnectionSmallIconURL from './FastLED/FastLED-small.svg';
+// import ottoRobotBasicIconURL from './ottoRobotBasic/ottorobotbasic.png';
+// import ottoRobotBasicConnectionIconURL from './ottoRobotBasic/ottorobotbasic-illustration.svg';
+// import ottoRobotBasicConnectionSmallIconURL from './ottoRobotBasic/ottorobotbasic-small.svg';
+//
+// import arduinoUnoIconURL from './arduinoUno/arduinoUno.png';
+// import arduinoUnoConnectionIconURL from './arduinoUno/arduinoUno-illustration.svg';
+// import arduinoUnoConnectionSmallIconURL from './arduinoUno/arduinoUno-small.svg';
+//
+// import FastLEDIconURL from './FastLED/FastLED.png';
+// import FastLEDConnectionIconURL from './FastLED/FastLED-illustration.svg';
+// import FastLEDConnectionSmallIconURL from './FastLED/FastLED-small.svg';
 
 const deviceData = [
     /**
-     * Unselect the deivce back to pure scratch mode
+     * Unselect the device back to pure scratch mode
      */
     {
         name: (
@@ -52,7 +52,13 @@ const deviceData = [
         tags: ['realtime']
     },
     {
-        name: 'Coconut-S (Stepper motor)',
+        name: (
+            <FormattedMessage
+                defaultMessage="Coconut-S"
+                description="Name for Coconut-S deivce"
+                id="gui.device.coconut.deviceName"
+            />
+        ),
         deviceId: 'coconutS',
         manufactor: 'coco-nut.kr',
         leanMore: 'http://coco-nut.kr',
@@ -60,8 +66,8 @@ const deviceData = [
         iconURL: coconutIconURL,
         description: (
             <FormattedMessage
-                defaultMessage="Coconut-s, get started with robot project."
-                description="Description for the Coconut-s"
+                defaultMessage="Start a project with Coconut-S."
+                description="Description for the Coconut-S"
                 id="gui.device.coconut.description"
             />
         ),
@@ -85,7 +91,7 @@ const deviceData = [
         baseToolBoxXml: arduinoBaseToolBox,
         // programMode: ['realtime', 'upload'],
         programMode: [],
-        programLanguage: ['block', 'c', 'cpp'],
+        programLanguage: ['block'],
         tags: ['robot'],
         helpLink: 'http://coco-nut.kr'
     }
