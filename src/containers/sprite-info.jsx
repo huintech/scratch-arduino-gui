@@ -10,8 +10,8 @@ class SpriteInfo extends React.Component {
         bindAll(this, [
             'handleClickVisible',
             'handleClickNotVisible',
-            'handlePressVisible',
-            'handlePressNotVisible'
+            // 'handlePressVisible',
+            // 'handlePressNotVisible'
         ]);
     }
     handleClickVisible (e) {
@@ -40,8 +40,8 @@ class SpriteInfo extends React.Component {
                 {...this.props}
                 onClickNotVisible={this.handleClickNotVisible}
                 onClickVisible={this.handleClickVisible}
-                onPressNotVisible={this.handlePressNotVisible}
-                onPressVisible={this.handlePressVisible}
+                // onPressNotVisible={this.handlePressNotVisible}
+                // onPressVisible={this.handlePressVisible}
             />
         );
     }

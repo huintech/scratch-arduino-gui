@@ -105,7 +105,7 @@ const SBFileUploaderHOC = function (WrappedComponent) {
                 // changed it, no need to confirm.)
                 let uploadAllowed = true;
                 if (userOwnsProject || (projectChanged && isShowingWithoutId)) {
-                    uploadAllowed = confirm( // eslint-disable-line no-alert
+                    uploadAllowed = confirm(
                         intl.formatMessage(sharedMessages.replaceProjectWarning)
                     );
                 }
@@ -138,8 +138,6 @@ const SBFileUploaderHOC = function (WrappedComponent) {
         getProjectTitleFromFilename (fileInputFilename) {
             if (!fileInputFilename) return '';
             // only parse title with valid scratch project extensions
-            // (.ob)
-            // const matches = fileInputFilename.match(/^(.*)\.sba?$/);
             // (.sb, .sb2, and .sb3)
             const matches = fileInputFilename.match(/^(.*)\.sb[23]?$/);
             if (!matches) return '';

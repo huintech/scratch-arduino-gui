@@ -690,8 +690,8 @@ class MenuBar extends React.Component {
                                 effect="solid"
                             >
                                 <FormattedMessage
-                                    defaultMessage="Scratch Arduino Link is connected"
-                                    description="Tooltip for menubar Scratch Arduino Link connected icon"
+                                    defaultMessage="Scratch Link is connected"
+                                    description="Tooltip for menubar Scratch Link connected icon"
                                     id="gui.menuBar.linkConnectedTooltip"
                                 />
                             </ReactTooltip>

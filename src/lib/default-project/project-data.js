@@ -2,11 +2,16 @@ import {defineMessages} from 'react-intl';
 import sharedMessages from '../shared-messages';
 
 let messages = defineMessages({
-    chirp: {
-        defaultMessage: 'Chirp',
-        description: 'Name for the chirp sound',
-        id: 'gui.defaultProject.chirp'
+    meow: {
+        defaultMessage: 'Meow',
+        description: 'Name for the meow sound',
+        id: 'gui.defaultProject.meow'
     },
+    // chirp: {
+    //     defaultMessage: 'Chirp',
+    //     description: 'Name for the chirp sound',
+    //     id: 'gui.defaultProject.chirp'
+    // },
     variable: {
         defaultMessage: 'my variable',
         description: 'Name for the default variable',
@@ -98,14 +103,23 @@ const projectData = translateFunction => {
                 ],
                 sounds: [
                     {
-                        assetId: '4e080acae1c3dc65eef30f07c2b0d4a5',
-                        name: translator(messages.chirp),
+                        assetId: '83c36d806dc92327b9e7049a565c6bff',
+                        name: translator(messages.meow),
                         dataFormat: 'wav',
                         format: '',
                         rate: 22050,
                         sampleCount: 18688,
-                        md5ext: '4e080acae1c3dc65eef30f07c2b0d4a5.wav'
+                        md5ext: '83c36d806dc92327b9e7049a565c6bff.wav'
                     }
+                    // {
+                    //     assetId: '4e080acae1c3dc65eef30f07c2b0d4a5',
+                    //     name: translator(messages.chirp),
+                    //     dataFormat: 'wav',
+                    //     format: '',
+                    //     rate: 22050,
+                    //     sampleCount: 18688,
+                    //     md5ext: '4e080acae1c3dc65eef30f07c2b0d4a5.wav'
+                    // }
                 ],
                 volume: 100,
                 visible: true,
