@@ -637,17 +637,17 @@ class MenuBar extends React.Component {
                         </div>
                     )}
                     {/*<Divider className={classNames(styles.divider)} />*/}
-                    <div
-                        aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
-                        className={classNames(styles.menuBarItem, styles.hoverable)}
-                        onClick={this.props.onOpenTipLibrary}
-                    >
-                        <img
-                            className={styles.helpIcon}
-                            src={helpIcon}
-                        />
-                        <FormattedMessage {...ariaMessages.tutorials} />
-                    </div>
+                    {/*<div*/}
+                    {/*    aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}*/}
+                    {/*    className={classNames(styles.menuBarItem, styles.hoverable)}*/}
+                    {/*    onClick={this.props.onOpenTipLibrary}*/}
+                    {/*>*/}
+                    {/*    <img*/}
+                    {/*        className={styles.helpIcon}*/}
+                    {/*        src={helpIcon}*/}
+                    {/*    />*/}
+                    {/*    <FormattedMessage {...ariaMessages.tutorials} />*/}
+                    {/*</div>*/}
                     <Divider className={classNames(styles.divider)} />
                     {this.props.canEditTitle ? (
                         <div className={classNames(styles.menuBarItem, styles.growable)}>
@@ -714,8 +714,8 @@ class MenuBar extends React.Component {
                                 effect="solid"
                             >
                                 <FormattedMessage
-                                    defaultMessage="Scratch Arduino Link is not installed or running!"
-                                    description="Tooltip for menubar Scratch Arduino Link disconnected icon"
+                                    defaultMessage="Scratch Link is not installed or running!"
+                                    description="Tooltip for menubar Scratch Link disconnected icon"
                                     id="gui.menuBar.linkDisconnectedTooltip"
                                 />
                             </ReactTooltip>
@@ -824,41 +824,41 @@ class MenuBar extends React.Component {
                             src={screenshotIcon}
                         />
                     </div>
-                    <Divider className={classNames(styles.divider)} />
-                    <div className={classNames(styles.menuBarItem, styles.programModeGroup)}>
-                        <Switch
-                            className={styles.programModeSwitch}
-                            onChange={this.handleProgramModeSwitchOnChange}
-                            checked={!this.props.isRealtimeMode}
-                            disabled={this.props.isToolboxUpdating || !this.props.isSupportSwitchMode}
-                            height={30}
-                            width={100}
-                            handleDiameter={24}
-                            borderRadius={5}
-                            onColor={this.props.isToolboxUpdating ||
-                                !this.props.isSupportSwitchMode ? '#888888' : '#007D7D'}
-                            offColor={this.props.isToolboxUpdating ||
-                                !this.props.isSupportSwitchMode ? '#888888' : '#FF8C1A'}
-                            uncheckedIcon={
-                                <div className={styles.modeSwitchRealtime}>
-                                    <FormattedMessage
-                                        defaultMessage="Interactive"
-                                        description="Button to switch to upload mode"
-                                        id="gui.menu-bar.modeSwitchRealtimeInteractive"
-                                    />
-                                </div>
-                            }
-                            checkedIcon={
-                                <div className={styles.modeSwitchUpload}>
-                                    <FormattedMessage
-                                        defaultMessage="Program"
-                                        description="Button to switch to realtime mode"
-                                        id="gui.menu-bar.modeSwitchRealtimeProgram"
-                                    />
-                                </div>
-                            }
-                        />
-                    </div>
+                    {/*<Divider className={classNames(styles.divider)} />*/}
+                    {/*<div className={classNames(styles.menuBarItem, styles.programModeGroup)}>*/}
+                    {/*    <Switch*/}
+                    {/*        className={styles.programModeSwitch}*/}
+                    {/*        onChange={this.handleProgramModeSwitchOnChange}*/}
+                    {/*        checked={!this.props.isRealtimeMode}*/}
+                    {/*        disabled={this.props.isToolboxUpdating || !this.props.isSupportSwitchMode}*/}
+                    {/*        height={30}*/}
+                    {/*        width={100}*/}
+                    {/*        handleDiameter={24}*/}
+                    {/*        borderRadius={5}*/}
+                    {/*        onColor={this.props.isToolboxUpdating ||*/}
+                    {/*            !this.props.isSupportSwitchMode ? '#888888' : '#007D7D'}*/}
+                    {/*        offColor={this.props.isToolboxUpdating ||*/}
+                    {/*            !this.props.isSupportSwitchMode ? '#888888' : '#FF8C1A'}*/}
+                    {/*        uncheckedIcon={*/}
+                    {/*            <div className={styles.modeSwitchRealtime}>*/}
+                    {/*                <FormattedMessage*/}
+                    {/*                    defaultMessage="Interactive"*/}
+                    {/*                    description="Button to switch to upload mode"*/}
+                    {/*                    id="gui.menu-bar.modeSwitchRealtimeInteractive"*/}
+                    {/*                />*/}
+                    {/*            </div>*/}
+                    {/*        }*/}
+                    {/*        checkedIcon={*/}
+                    {/*            <div className={styles.modeSwitchUpload}>*/}
+                    {/*                <FormattedMessage*/}
+                    {/*                    defaultMessage="Program"*/}
+                    {/*                    description="Button to switch to realtime mode"*/}
+                    {/*                    id="gui.menu-bar.modeSwitchRealtimeProgram"*/}
+                    {/*                />*/}
+                    {/*            </div>*/}
+                    {/*        }*/}
+                    {/*    />*/}
+                    {/*</div>*/}
                     {isScratchDesktop() ? (
                         <div
                             className={classNames(styles.menuBarItem, styles.hoverable, {
@@ -923,27 +923,27 @@ class MenuBar extends React.Component {
                     ) : (
                         // ********* user not logged in, but a session exists so they can choose to log in ********
                         <React.Fragment>
-                            <div
-                                className={classNames(
-                                    styles.menuBarItem,
-                                    styles.hoverable
-                                )}
-                                key="login"
-                                onMouseUp={this.props.onClickLogin}
-                            >
-                                <FormattedMessage
-                                    defaultMessage="Sign in"
-                                    description="Link for signing in to your Scratch account"
-                                    id="gui.menuBar.signIn"
-                                />
-                                <LoginDropdown
-                                    className={classNames(styles.menuBarMenu)}
-                                    isOpen={this.props.loginMenuOpen}
-                                    isRtl={this.props.isRtl}
-                                    renderLogin={this.props.renderLogin}
-                                    onClose={this.props.onRequestCloseLogin}
-                                />
-                            </div>
+                            {/*<div*/}
+                            {/*    className={classNames(*/}
+                            {/*        styles.menuBarItem,*/}
+                            {/*        styles.hoverable*/}
+                            {/*    )}*/}
+                            {/*    key="login"*/}
+                            {/*    onMouseUp={this.props.onClickLogin}*/}
+                            {/*>*/}
+                            {/*    <FormattedMessage*/}
+                            {/*        defaultMessage="Sign in"*/}
+                            {/*        description="Link for signing in to your Scratch account"*/}
+                            {/*        id="gui.menuBar.signIn"*/}
+                            {/*    />*/}
+                            {/*    <LoginDropdown*/}
+                            {/*        className={classNames(styles.menuBarMenu)}*/}
+                            {/*        isOpen={this.props.loginMenuOpen}*/}
+                            {/*        isRtl={this.props.isRtl}*/}
+                            {/*        renderLogin={this.props.renderLogin}*/}
+                            {/*        onClose={this.props.onRequestCloseLogin}*/}
+                            {/*    />*/}
+                            {/*</div>*/}
                         </React.Fragment>
                     )}
                 </div>
