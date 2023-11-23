@@ -5,8 +5,10 @@ import arduinoUnoIcon from '../lib/libraries/devices/arduinoUno/arduinoUno-small
 import arduinoNanoIcon from '../lib/libraries/devices/arduinoNano/arduinoNano-small.svg';
 import esp32Icon from '../lib/libraries/devices/esp32/esp32-small.svg';
 import esp8266Icon from '../lib/libraries/devices/esp8266/esp8266-small.svg';
+import coconutSIcon from '../lib/libraries/devices/coconutS/coconut-small.svg';
 
 const iconImages = {
+    'coconutS': coconutSIcon,
     'ottoBasic': ottoBasicIcon,
     'FastLED': FastLEDIcon,
     'arduinoUno': arduinoUnoIcon,

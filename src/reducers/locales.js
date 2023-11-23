@@ -21,16 +21,14 @@ const reducer = function (state, action) {
     case SELECT_LOCALE:
         return Object.assign({}, state, {
             isRtl: isRtl(action.locale),
-            // locale: action.locale,
-            locale: 'en',
+            locale: action.locale,
             messagesByLocale: state.messagesByLocale,
             messages: state.messagesByLocale[action.locale]
         });
     case UPDATE_LOCALES:
         return Object.assign({}, state, {
             isRtl: state.isRtl,
-            // locale: state.locale,
-            locale: 'en',
+            locale: state.locale,
             messagesByLocale: action.messagesByLocale,
             messages: action.messagesByLocale[state.locale]
         });

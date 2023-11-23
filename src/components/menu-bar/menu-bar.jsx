@@ -12,21 +12,21 @@ import VM from 'scratch-arduino-vm';
 
 import Box from '../box/box.jsx';
 import Button from '../button/button.jsx';
-import CommunityButton from './community-button.jsx'; // eslint-disable-line no-unused-vars
-import ShareButton from './share-button.jsx'; // eslint-disable-line no-unused-vars
+import CommunityButton from './community-button.jsx';
+import ShareButton from './share-button.jsx';
 import {ComingSoonTooltip} from '../coming-soon/coming-soon.jsx';
 import Divider from '../divider/divider.jsx';
 import LanguageSelector from '../../containers/language-selector.jsx';
-import SaveStatus from './save-status.jsx'; // eslint-disable-line no-unused-vars
-import ProjectWatcher from '../../containers/project-watcher.jsx'; // eslint-disable-line no-unused-vars
+import SaveStatus from './save-status.jsx';
+import ProjectWatcher from '../../containers/project-watcher.jsx';
 import MenuBarMenu from './menu-bar-menu.jsx';
 import {MenuItem, MenuSection} from '../menu/menu.jsx';
 import ProjectTitleInput from './project-title-input.jsx';
 import AuthorInfo from './author-info.jsx';
-import AccountNav from '../../containers/account-nav.jsx'; // eslint-disable-line no-unused-vars
-import LoginDropdown from './login-dropdown.jsx'; // eslint-disable-line no-unused-vars
+import AccountNav from '../../containers/account-nav.jsx';
+import LoginDropdown from './login-dropdown.jsx';
 import SB3Downloader from '../../containers/sb3-downloader.jsx';
-import DeletionRestorer from '../../containers/deletion-restorer.jsx'; 
+import DeletionRestorer from '../../containers/deletion-restorer.jsx';
 import TurboMode from '../../containers/turbo-mode.jsx';
 import MenuBarHOC from '../../containers/menu-bar-hoc.jsx';
 import {isScratchDesktop} from '../../lib/isScratchDesktop';
@@ -51,7 +51,7 @@ import {
 import {
     openAboutMenu,
     closeAboutMenu,
-    aboutMenuOpen,    
+    aboutMenuOpen,
     openAccountMenu,
     closeAccountMenu,
     accountMenuOpen,
@@ -83,13 +83,13 @@ import collectMetadata from '../../lib/collect-metadata';
 import styles from './menu-bar.css';
 
 import helpIcon from '../../lib/assets/icon--tutorials.svg';
-import mystuffIcon from './icon--mystuff.png'; // eslint-disable-line no-unused-vars
-import profileIcon from './icon--profile.png'; // eslint-disable-line no-unused-vars
+import mystuffIcon from './icon--mystuff.png';
+import profileIcon from './icon--profile.png';
 import remixIcon from './icon--remix.svg';
 import dropdownCaret from './dropdown-caret.svg';
 import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
-import linkSocketIcon from './icon--link-socket.svg'; // eslint-disable-line no-unused-vars
+import linkSocketIcon from './icon--link-socket.svg';
 
 import scratchLogo from './scratch-logo.svg';
 
@@ -221,13 +221,13 @@ class MenuBar extends React.Component {
         this.props.vm.on('LINK_CONNECTED', this.props.onLinkConnected);
         this.props.vm.on('LINK_DISCONNECTED', this.props.onLinkDisconnected);
         this.props.vm.on('PERIPHERAL_DISCONNECTED', this.props.onDisconnect);
-        this.props.vm.on('PROGRAM_MODE_UPDATE', this.handleProgramModeUpdate); 
+        this.props.vm.on('PROGRAM_MODE_UPDATE', this.handleProgramModeUpdate);
     }
     componentWillUnmount () {
         document.removeEventListener('keydown', this.handleKeyPress);
         this.props.vm.removeListener('PERIPHERAL_DISCONNECTED', this.props.onDisconnect);
         this.props.vm.removeListener('PROGRAM_MODE_UPDATE', this.handleProgramModeUpdate);
-    }    
+    }
     handleClickNew () {
         // if the project is dirty, and user owns the project, we will autosave.
         // but if they are not logged in and can't save, user should consider
@@ -458,7 +458,7 @@ class MenuBar extends React.Component {
             callback();
             this.props.onRequestCloseAbout();
         };
-    }    
+    }
     render () {
         const saveNowMessage = (
             <FormattedMessage
@@ -525,6 +525,7 @@ class MenuBar extends React.Component {
         );
         // Show the About button only if we have a handler for it (like in the desktop app)
         const aboutButton = this.buildAboutMenu(this.props.onClickAbout);
+        // TODO: must change coconutS log
         return (
             <Box
                 className={classNames(
@@ -535,7 +536,7 @@ class MenuBar extends React.Component {
                 <div className={styles.mainMenu}>
                     <div className={classNames(styles.menuBarItem)}>
                         <img
-                            alt="Ottawa STEM Club"
+                            alt="COCONUT"
                             className={classNames(styles.scratchLogo, {
                                 [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
                             })}
@@ -544,21 +545,22 @@ class MenuBar extends React.Component {
                             onClick={this.props.onClickLogo}
                         />
                     </div>
-                    {/* {(this.props.canChangeLanguage) && (<div
-                        className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
-                    >
+                    {(this.props.canChangeLanguage) && (<div
+                            className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
+                        >
                         <div>
                             <img
                                 className={styles.languageIcon}
                                 src={languageIcon}
                             />
+                            {/*Language*/}
                             <img
                                 className={styles.languageCaret}
                                 src={dropdownCaret}
                             />
                         </div>
                         <LanguageSelector label={this.props.intl.formatMessage(ariaMessages.language)} />
-                    </div>)} */}
+                    </div>)}
                     {(this.props.canManageFiles) && (
                         <div
                             className={classNames(styles.menuBarItem, styles.hoverable, {
@@ -574,6 +576,10 @@ class MenuBar extends React.Component {
                                 defaultMessage="File"
                                 description="Text for file dropdown menu"
                                 id="gui.menuBar.file"
+                            />
+                            <img
+                                className={styles.languageCaret}
+                                src={dropdownCaret}
                             />
                             <MenuBarMenu
                                 className={classNames(styles.menuBarMenu)}
@@ -613,7 +619,7 @@ class MenuBar extends React.Component {
                                         onClick={this.props.onStartSelectingFileUpload}
                                     >
                                         {this.props.intl.formatMessage(sharedMessages.loadFromComputerTitle)}
-                                    </MenuItem>                                    
+                                    </MenuItem>
                                     <SB3Downloader>{(className, downloadProjectCallback) => (
                                         <MenuItem
                                             className={className}
@@ -630,18 +636,18 @@ class MenuBar extends React.Component {
                             </MenuBarMenu>
                         </div>
                     )}
-                    <Divider className={classNames(styles.divider)} />
-                    <div
-                        aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
-                        className={classNames(styles.menuBarItem, styles.hoverable)}
-                        onClick={this.props.onOpenTipLibrary}
-                    >
-                        <img
-                            className={styles.helpIcon}
-                            src={helpIcon}
-                        />
-                        <FormattedMessage {...ariaMessages.tutorials} />
-                    </div>
+                    {/*<Divider className={classNames(styles.divider)} />*/}
+                    {/*<div*/}
+                    {/*    aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}*/}
+                    {/*    className={classNames(styles.menuBarItem, styles.hoverable)}*/}
+                    {/*    onClick={this.props.onOpenTipLibrary}*/}
+                    {/*>*/}
+                    {/*    <img*/}
+                    {/*        className={styles.helpIcon}*/}
+                    {/*        src={helpIcon}*/}
+                    {/*    />*/}
+                    {/*    <FormattedMessage {...ariaMessages.tutorials} />*/}
+                    {/*</div>*/}
                     <Divider className={classNames(styles.divider)} />
                     {this.props.canEditTitle ? (
                         <div className={classNames(styles.menuBarItem, styles.growable)}>
@@ -665,7 +671,7 @@ class MenuBar extends React.Component {
                     ) : null)}
                     <div className={classNames(styles.menuBarItem)}>
                         {this.props.canRemix ? remixButton : []}
-                    </div>                    
+                    </div>
                     <Divider className={classNames(styles.divider)} />  {/* Device management */}
                     {this.props.linkStatus ? (
                         <div
@@ -684,8 +690,8 @@ class MenuBar extends React.Component {
                                 effect="solid"
                             >
                                 <FormattedMessage
-                                    defaultMessage="Scratch Arduino Link is connected"
-                                    description="Tooltip for menubar Scratch Arduino Link connected icon"
+                                    defaultMessage="Scratch Link is connected"
+                                    description="Tooltip for menubar Scratch Link connected icon"
                                     id="gui.menuBar.linkConnectedTooltip"
                                 />
                             </ReactTooltip>
@@ -708,12 +714,12 @@ class MenuBar extends React.Component {
                                 effect="solid"
                             >
                                 <FormattedMessage
-                                    defaultMessage="Scratch Arduino Link is not installed or running!"
-                                    description="Tooltip for menubar Scratch Arduino Link disconnected icon"
+                                    defaultMessage="Scratch Link is not installed or running!"
+                                    description="Tooltip for menubar Scratch Link disconnected icon"
                                     id="gui.menuBar.linkDisconnectedTooltip"
                                 />
                             </ReactTooltip>
-                        </div>                    
+                        </div>
                     )}
                     <div
                         className={classNames(styles.menuBarItem, styles.hoverable)}
@@ -735,7 +741,7 @@ class MenuBar extends React.Component {
                                 description="Text for menubar device select button"
                                 id="gui.menuBar.noDeviceSelected"
                             />
-                        )} 
+                        )}
                         <ReactTooltip
                             className={styles.selectDeviceTooltip}
                             id="selectDeviceTip"
@@ -795,7 +801,7 @@ class MenuBar extends React.Component {
                                     id="gui.menuBar.deviceDisconnected"
                                 />
                             </ReactTooltip>
-                        </div>                  
+                        </div>
                     )}
                     <Divider className={classNames(styles.divider)} />
                 </div>
@@ -806,7 +812,7 @@ class MenuBar extends React.Component {
                         {this.props.canSave && (
                             <SaveStatus />
                         )}
-                    </div>                    
+                    </div>
                     <div
                         className={classNames(styles.menuBarItem, styles.hoverable)}
                         onMouseUp={this.handleScreenshot}
@@ -818,41 +824,41 @@ class MenuBar extends React.Component {
                             src={screenshotIcon}
                         />
                     </div>
-                    <Divider className={classNames(styles.divider)} />
-                    <div className={classNames(styles.menuBarItem, styles.programModeGroup)}>
-                        <Switch
-                            className={styles.programModeSwitch}
-                            onChange={this.handleProgramModeSwitchOnChange}
-                            checked={!this.props.isRealtimeMode}
-                            disabled={this.props.isToolboxUpdating || !this.props.isSupportSwitchMode}
-                            height={30}
-                            width={100}
-                            handleDiameter={24}
-                            borderRadius={5}
-                            onColor={this.props.isToolboxUpdating ||
-                                !this.props.isSupportSwitchMode ? '#888888' : '#007D7D'}
-                            offColor={this.props.isToolboxUpdating ||
-                                !this.props.isSupportSwitchMode ? '#888888' : '#FF8C1A'}
-                            uncheckedIcon={
-                                <div className={styles.modeSwitchRealtime}>
-                                    <FormattedMessage
-                                        defaultMessage="Interactive"
-                                        description="Button to switch to upload mode"
-                                        id="gui.menu-bar.modeSwitchRealtimeInteractive"
-                                    />
-                                </div>
-                            }
-                            checkedIcon={
-                                <div className={styles.modeSwitchUpload}>
-                                    <FormattedMessage
-                                        defaultMessage="Program"
-                                        description="Button to switch to realtime mode"
-                                        id="gui.menu-bar.modeSwitchRealtimeProgram"
-                                    />
-                                </div>
-                            }
-                        />
-                    </div>
+                    {/*<Divider className={classNames(styles.divider)} />*/}
+                    {/*<div className={classNames(styles.menuBarItem, styles.programModeGroup)}>*/}
+                    {/*    <Switch*/}
+                    {/*        className={styles.programModeSwitch}*/}
+                    {/*        onChange={this.handleProgramModeSwitchOnChange}*/}
+                    {/*        checked={!this.props.isRealtimeMode}*/}
+                    {/*        disabled={this.props.isToolboxUpdating || !this.props.isSupportSwitchMode}*/}
+                    {/*        height={30}*/}
+                    {/*        width={100}*/}
+                    {/*        handleDiameter={24}*/}
+                    {/*        borderRadius={5}*/}
+                    {/*        onColor={this.props.isToolboxUpdating ||*/}
+                    {/*            !this.props.isSupportSwitchMode ? '#888888' : '#007D7D'}*/}
+                    {/*        offColor={this.props.isToolboxUpdating ||*/}
+                    {/*            !this.props.isSupportSwitchMode ? '#888888' : '#FF8C1A'}*/}
+                    {/*        uncheckedIcon={*/}
+                    {/*            <div className={styles.modeSwitchRealtime}>*/}
+                    {/*                <FormattedMessage*/}
+                    {/*                    defaultMessage="Interactive"*/}
+                    {/*                    description="Button to switch to upload mode"*/}
+                    {/*                    id="gui.menu-bar.modeSwitchRealtimeInteractive"*/}
+                    {/*                />*/}
+                    {/*            </div>*/}
+                    {/*        }*/}
+                    {/*        checkedIcon={*/}
+                    {/*            <div className={styles.modeSwitchUpload}>*/}
+                    {/*                <FormattedMessage*/}
+                    {/*                    defaultMessage="Program"*/}
+                    {/*                    description="Button to switch to realtime mode"*/}
+                    {/*                    id="gui.menu-bar.modeSwitchRealtimeProgram"*/}
+                    {/*                />*/}
+                    {/*            </div>*/}
+                    {/*        }*/}
+                    {/*    />*/}
+                    {/*</div>*/}
                     {isScratchDesktop() ? (
                         <div
                             className={classNames(styles.menuBarItem, styles.hoverable, {
@@ -917,27 +923,27 @@ class MenuBar extends React.Component {
                     ) : (
                         // ********* user not logged in, but a session exists so they can choose to log in ********
                         <React.Fragment>
-                            <div
-                                className={classNames(
-                                    styles.menuBarItem,
-                                    styles.hoverable
-                                )}
-                                key="login"
-                                onMouseUp={this.props.onClickLogin}
-                            >
-                                <FormattedMessage
-                                    defaultMessage="Sign in"
-                                    description="Link for signing in to your Scratch account"
-                                    id="gui.menuBar.signIn"
-                                />
-                                <LoginDropdown
-                                    className={classNames(styles.menuBarMenu)}
-                                    isOpen={this.props.loginMenuOpen}
-                                    isRtl={this.props.isRtl}
-                                    renderLogin={this.props.renderLogin}
-                                    onClose={this.props.onRequestCloseLogin}
-                                />
-                            </div>
+                            {/*<div*/}
+                            {/*    className={classNames(*/}
+                            {/*        styles.menuBarItem,*/}
+                            {/*        styles.hoverable*/}
+                            {/*    )}*/}
+                            {/*    key="login"*/}
+                            {/*    onMouseUp={this.props.onClickLogin}*/}
+                            {/*>*/}
+                            {/*    <FormattedMessage*/}
+                            {/*        defaultMessage="Sign in"*/}
+                            {/*        description="Link for signing in to your Scratch account"*/}
+                            {/*        id="gui.menuBar.signIn"*/}
+                            {/*    />*/}
+                            {/*    <LoginDropdown*/}
+                            {/*        className={classNames(styles.menuBarMenu)}*/}
+                            {/*        isOpen={this.props.loginMenuOpen}*/}
+                            {/*        isRtl={this.props.isRtl}*/}
+                            {/*        renderLogin={this.props.renderLogin}*/}
+                            {/*        onClose={this.props.onRequestCloseLogin}*/}
+                            {/*    />*/}
+                            {/*</div>*/}
                         </React.Fragment>
                     )}
                 </div>
@@ -1108,7 +1114,7 @@ const mapDispatchToProps = dispatch => ({
     onClickLogin: () => dispatch(openLoginMenu()),
     onRequestCloseLogin: () => dispatch(closeLoginMenu()),
     onRequestOpenAbout: () => dispatch(openAboutMenu()),
-    onRequestCloseAbout: () => dispatch(closeAboutMenu()),    
+    onRequestCloseAbout: () => dispatch(closeAboutMenu()),
     onClickNew: needSave => dispatch(requestNewProject(needSave)),
     onClickRemix: () => dispatch(remixProject()),
     onClickSave: () => dispatch(manualUpdateProject()),

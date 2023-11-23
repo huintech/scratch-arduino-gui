@@ -95,7 +95,7 @@ const GUIComponent = props => {
         isPlayerOnly,
         isRtl,
         isShared,
-        isTelemetryEnabled,        
+        isTelemetryEnabled,
         loading,
         logo,
         renderLogin,
@@ -122,7 +122,7 @@ const GUIComponent = props => {
         onSeeCommunity,
         onShare,
         onShowPrivacyPolicy,
-        onStartSelectingFileUpload,        
+        onStartSelectingFileUpload,
         onTelemetryModalCancel,
         onTelemetryModalOptIn,
         onTelemetryModalOptOut,
@@ -181,7 +181,7 @@ const GUIComponent = props => {
                 {telemetryModalVisible ? (
                     <TelemetryModal
                         isRtl={isRtl}
-                        isTelemetryEnabled={isTelemetryEnabled}                    
+                        isTelemetryEnabled={isTelemetryEnabled}
                         onCancel={onTelemetryModalCancel}
                         onOptIn={onTelemetryModalOptIn}
                         onOptOut={onTelemetryModalOptOut}
@@ -267,7 +267,7 @@ const GUIComponent = props => {
                     onProjectTelemetryEvent={onProjectTelemetryEvent}
                     onSeeCommunity={onSeeCommunity}
                     onShare={onShare}
-                    onStartSelectingFileUpload={onStartSelectingFileUpload}                    
+                    onStartSelectingFileUpload={onStartSelectingFileUpload}
                     onToggleLoginOpen={onToggleLoginOpen}
                     onClickCheckUpdate={onClickCheckUpdate}
                     onClickClearCache={onClickClearCache}
@@ -466,7 +466,7 @@ GUIComponent.propTypes = {
     onSeeCommunity: PropTypes.func,
     onShare: PropTypes.func,
     onShowPrivacyPolicy: PropTypes.func,
-    onStartSelectingFileUpload: PropTypes.func,    
+    onStartSelectingFileUpload: PropTypes.func,
     onTabSelect: PropTypes.func,
     onTelemetryModalCancel: PropTypes.func,
     onTelemetryModalOptIn: PropTypes.func,
@@ -486,11 +486,11 @@ GUIComponent.defaultProps = {
     backpackHost: null,
     backpackVisible: false,
     basePath: './',
-    canChangeLanguage: false,
+    canChangeLanguage: true,
     canCreateNew: false,
     canEditTitle: false,
     canManageFiles: true,
-    canRemix: true,
+    canRemix: false,
     canSave: false,
     canCreateCopy: false,
     canShare: false,

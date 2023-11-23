@@ -31,7 +31,7 @@ MenuBarMenu.propTypes = {
     onRequestClose: PropTypes.func,
     open: PropTypes.bool,
     place: PropTypes.oneOf(['left', 'right']),
-    directiron: PropTypes.oneOf(['donw', 'up'])
+    directiron: PropTypes.oneOf(['down', 'up'])
 };
 
 export default MenuBarMenu;

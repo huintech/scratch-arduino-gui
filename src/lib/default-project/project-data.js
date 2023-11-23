@@ -2,11 +2,16 @@ import {defineMessages} from 'react-intl';
 import sharedMessages from '../shared-messages';
 
 let messages = defineMessages({
-    chirp: {
-        defaultMessage: 'Chirp',
-        description: 'Name for the chirp sound',
-        id: 'gui.defaultProject.chirp'
+    meow: {
+        defaultMessage: 'Meow',
+        description: 'Name for the meow sound',
+        id: 'gui.defaultProject.meow'
     },
+    // chirp: {
+    //     defaultMessage: 'Chirp',
+    //     description: 'Name for the chirp sound',
+    //     id: 'gui.defaultProject.chirp'
+    // },
     variable: {
         defaultMessage: 'my variable',
         description: 'Name for the default variable',
@@ -69,40 +74,60 @@ const projectData = translateFunction => {
                 currentCostume: 0,
                 costumes: [
                     {
-                        assetId: '5de48e72637db4d7fc7f6bb526354114',
+                        assetId: '763b8741d9f1a6fb4e0b72865d993f33',
                         name: translator(messages.costume, {index: 1}),
                         bitmapResolution: 1,
-                        md5ext: '5de48e72637db4d7fc7f6bb526354114.svg',
+                        md5ext: '763b8741d9f1a6fb4e0b72865d993f33.svg',
                         dataFormat: 'svg',
-                        rotationCenterX: 48,
-                        rotationCenterY: 50
+                        rotationCenterX: 150,
+                        rotationCenterY: 110
                     },
-                    {
-                        assetId: '48bbc82a10af3d0e0b7d5c677097df0e',
-                        name: translator(messages.costume, {index: 2}),
-                        bitmapResolution: 1,
-                        md5ext: '48bbc82a10af3d0e0b7d5c677097df0e.svg',
-                        dataFormat: 'svg',
-                        rotationCenterX: 46,
-                        rotationCenterY: 53
-                    }
+                    // {
+                    //     assetId: '5de48e72637db4d7fc7f6bb526354114',
+                    //     name: translator(messages.costume, {index: 1}),
+                    //     bitmapResolution: 1,
+                    //     md5ext: '5de48e72637db4d7fc7f6bb526354114.svg',
+                    //     dataFormat: 'svg',
+                    //     rotationCenterX: 48,
+                    //     rotationCenterY: 50
+                    // },
+                    // {
+                    //     assetId: '48bbc82a10af3d0e0b7d5c677097df0e',
+                    //     name: translator(messages.costume, {index: 2}),
+                    //     bitmapResolution: 1,
+                    //     md5ext: '48bbc82a10af3d0e0b7d5c677097df0e.svg',
+                    //     dataFormat: 'svg',
+                    //     rotationCenterX: 46,
+                    //     rotationCenterY: 53
+                    // }
                 ],
                 sounds: [
                     {
-                        assetId: '4e080acae1c3dc65eef30f07c2b0d4a5',
-                        name: translator(messages.chirp),
+                        assetId: '83c36d806dc92327b9e7049a565c6bff',
+                        name: translator(messages.meow),
                         dataFormat: 'wav',
                         format: '',
                         rate: 22050,
                         sampleCount: 18688,
-                        md5ext: '4e080acae1c3dc65eef30f07c2b0d4a5.wav'
+                        md5ext: '83c36d806dc92327b9e7049a565c6bff.wav'
                     }
+                    // {
+                    //     assetId: '4e080acae1c3dc65eef30f07c2b0d4a5',
+                    //     name: translator(messages.chirp),
+                    //     dataFormat: 'wav',
+                    //     format: '',
+                    //     rate: 22050,
+                    //     sampleCount: 18688,
+                    //     md5ext: '4e080acae1c3dc65eef30f07c2b0d4a5.wav'
+                    // }
                 ],
                 volume: 100,
                 visible: true,
-                x: -50,
-                y: 10,
-                size: 100,
+                x: 0,
+                // x: -50,
+                // y: 10,
+                y: 0,
+                size: 105,
                 direction: 90,
                 draggable: false,
                 rotationStyle: 'all around'
