@@ -8,7 +8,7 @@ import bowser from 'bowser';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 
 import Box from '../box/box.jsx';
 import Button from '../button/button.jsx';

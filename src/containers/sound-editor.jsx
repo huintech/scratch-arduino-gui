@@ -2,7 +2,7 @@ import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
 import WavEncoder from 'wav-encoder';
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 
 import {connect} from 'react-redux';
 

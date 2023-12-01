@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import bindAll from 'lodash.bindall';
 import {defineMessages, intlShape, injectIntl} from 'react-intl';
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 
 import AssetPanel from '../components/asset-panel/asset-panel.jsx';
 import soundIcon from '../components/asset-panel/icon--sound.svg';

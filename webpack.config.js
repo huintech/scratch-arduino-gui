@@ -43,7 +43,8 @@ const base = {
             include: [
                 path.resolve(__dirname, 'src'),
                 /node_modules[\\/]scratch-[^\\/]+[\\/]src/,
-                /node_modules[\\/]scratch-arduino-[^\\/]+[\\/]src/,
+                /node_modules[\\/]@huintech[\\/]scratch-arduino-[^\\/]+[\\/]src/,
+                /node_modules[\\/]@huintech[\\/]coconut-scratch-[^\\/]+[\\/]src/,
                 /node_modules[\\/]pify/,
                 /node_modules[\\/]@vernier[\\/]godirect/
             ],
@@ -63,7 +64,7 @@ const base = {
         },
         {
             test: /\.css$/,
-            exclude: MONACO_DIR,
+            // exclude: MONACO_DIR,
             use: [{
                 loader: 'style-loader'
             }, {
@@ -87,12 +88,13 @@ const base = {
                     }
                 }
             }]
-        },
-        {
-            test: /\.css$/,
-            include: MONACO_DIR,
-            use: ['style-loader', 'css-loader']
-        }]
+        }
+        // {
+        //     test: /\.css$/,
+        //     include: MONACO_DIR,
+        //     use: ['style-loader', 'css-loader']
+        // }
+        ]
     },
     optimization: {
         minimizer: [
@@ -102,10 +104,10 @@ const base = {
         ]
     },
     plugins: [
-        new MonacoWebpackPlugin({
-            languages: ['c', 'cpp', 'python', 'lua', 'javascript'],
-            features: ['!gotoSymbol']
-        })
+        // new MonacoWebpackPlugin({
+        //     languages: ['c', 'cpp', 'python', 'lua', 'javascript'],
+        //     features: ['!gotoSymbol']
+        // })
     ]
 };
 
@@ -186,7 +188,7 @@ module.exports = [
                 to: 'static'
             }]),
             new CopyWebpackPlugin([{
-                from: 'node_modules/scratch-arduino-blocks/media',
+                from: 'node_modules/@huintech/scratch-arduino-blocks/media',
                 to: 'static/blocks-media'
             }]),
             new CopyWebpackPlugin([{
@@ -196,7 +198,7 @@ module.exports = [
             }]),
             new CopyWebpackPlugin([{
                 from: 'extension-worker.{js,js.map}',
-                context: 'node_modules/scratch-arduino-vm/dist/web'
+                context: 'node_modules/@huintech/scratch-arduino-vm/dist/web'
             }])
         ])
     })
@@ -231,12 +233,12 @@ module.exports = [
             },
             plugins: base.plugins.concat([
                 new CopyWebpackPlugin([{
-                    from: 'node_modules/scratch-arduino-blocks/media',
+                    from: 'node_modules/@huintech/scratch-arduino-blocks/media',
                     to: 'static/blocks-media'
                 }]),
                 new CopyWebpackPlugin([{
                     from: 'extension-worker.{js,js.map}',
-                    context: 'node_modules/scratch-arduino-vm/dist/web'
+                    context: 'node_modules/@huintech/scratch-arduino-vm/dist/web'
                 }]),
                 // Include library JSON files for scratch-desktop to use for downloading
                 new CopyWebpackPlugin([{

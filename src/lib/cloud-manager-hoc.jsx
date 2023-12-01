@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import bindAll from 'lodash.bindall';
 
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 import CloudProvider from '../lib/cloud-provider';
 
 import {

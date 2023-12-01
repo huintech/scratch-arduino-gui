@@ -6,7 +6,7 @@ import {LoadingState} from '../../../src/reducers/project-state';
 
 import configureStore from 'redux-mock-store';
 import {Provider} from 'react-redux';
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 
 
 describe('MenuBar Component', () => {

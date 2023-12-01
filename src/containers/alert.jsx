@@ -1,6 +1,6 @@
 import React from 'react';
 import bindAll from 'lodash.bindall';
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import SB3Downloader from './sb3-downloader.jsx';

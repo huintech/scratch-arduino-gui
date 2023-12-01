@@ -1,4 +1,4 @@
-import ScratchBlocks from 'scratch-arduino-blocks';
+import ScratchBlocks from '@huintech/scratch-arduino-blocks';
 
 const categorySeparator = '<sep gap="36"/>';
 

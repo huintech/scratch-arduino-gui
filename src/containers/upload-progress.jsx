@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {compose} from 'redux';
 import {injectIntl, intlShape, defineMessages} from 'react-intl';
 
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 import analytics from '../lib/analytics';
 import {closeUploadProgress} from '../reducers/modals';
 import {showAlertWithTimeout} from '../reducers/alerts';

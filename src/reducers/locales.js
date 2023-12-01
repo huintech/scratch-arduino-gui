@@ -1,7 +1,7 @@
 import {addLocaleData} from 'react-intl';
 
-import {localeData, isRtl} from 'scratch-arduino-l10n';
-import editorMessages from 'scratch-arduino-l10n/locales/editor-msgs';
+import {localeData, isRtl} from '@huintech/coconut-scratch-l10n';
+import editorMessages from '@huintech/coconut-scratch-l10n/locales/editor-msgs';
 
 addLocaleData(localeData);
 

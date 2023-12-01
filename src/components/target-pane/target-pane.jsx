@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 
 import SpriteLibrary from '../../containers/sprite-library.jsx';
 import SpriteSelectorComponent from '../sprite-selector/sprite-selector.jsx';
@@ -114,7 +114,7 @@ const spriteShape = PropTypes.shape({
         rotationCenterX: PropTypes.number,
         rotationCenterY: PropTypes.number
     }),
-    costumeCount: PropTypes.number,    
+    costumeCount: PropTypes.number,
     direction: PropTypes.number,
     id: PropTypes.string,
     name: PropTypes.string,

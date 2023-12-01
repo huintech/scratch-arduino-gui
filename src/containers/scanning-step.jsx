@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import bindAll from 'lodash.bindall';
 import ScanningStepComponent from '../components/connection-modal/scanning-step.jsx';
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 
 class ScanningStep extends React.Component {
     constructor (props) {

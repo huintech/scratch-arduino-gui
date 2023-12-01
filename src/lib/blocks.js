@@ -1,6 +1,6 @@
-import ScratchBlocks from 'scratch-arduino-blocks';
-import 'scratch-arduino-blocks/arduino_compressed';
-import 'scratch-arduino-blocks/python_compressed';
+import ScratchBlocks from '@huintech/scratch-arduino-blocks';
+import '@huintech/scratch-arduino-blocks/arduino_compressed';
+import '@huintech/scratch-arduino-blocks/python_compressed';
 import iconv from 'iconv-lite';
 
 /**

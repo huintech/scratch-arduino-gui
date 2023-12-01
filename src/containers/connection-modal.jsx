@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import bindAll from 'lodash.bindall';
 import ConnectionModalComponent, {PHASES} from '../components/connection-modal/connection-modal.jsx';
-import VM from 'scratch-arduino-vm';
+import VM from '@huintech/scratch-arduino-vm';
 import analytics from '../lib/analytics';
 import extensionData from '../lib/libraries/extensions/index.jsx';
 import {connect} from 'react-redux';
@@ -27,7 +27,7 @@ class ConnectionModal extends React.Component {
             extension: extensionData.find(ext => ext.extensionId === props.deviceId) || this.props.deviceData.find(ext => ext.deviceId === props.deviceId),
             phase: props.vm.getPeripheralIsConnected(props.deviceId) ? PHASES.connected : PHASES.scanning,
             peripheralName: null,
-            arduinoNanoType: '0'      // 1: ATmega168, 2: ATmega328 (Old Bootloder), 3: ATmega328  
+            arduinoNanoType: '0'      // 1: ATmega168, 2: ATmega328 (Old Bootloder), 3: ATmega328
         };
     }
     componentDidMount () {
