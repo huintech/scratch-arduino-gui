@@ -26,7 +26,7 @@ const onClickUpgrade = () => {
 };
 
 const onClickClearCache = () => {
-    log('User click clear cahce');
+    log('User click clear cache');
 };
 
 const onClickInstallDriver = () => {

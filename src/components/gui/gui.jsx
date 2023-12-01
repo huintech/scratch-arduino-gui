@@ -24,7 +24,6 @@ import Watermark from '../../containers/watermark.jsx';
 import Hardware from '../../containers/hardware.jsx';
 import HardwareHeader from '../../containers/hardware-header.jsx';
 
-// eslint-disable-next-line no-unused-vars
 import Backpack from '../../containers/backpack.jsx';
 import WebGlModal from '../../containers/webgl-modal.jsx';
 import TipsLibrary from '../../containers/tips-library.jsx';
