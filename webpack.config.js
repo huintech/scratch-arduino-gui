@@ -1,20 +1,20 @@
 const defaultsDeep = require('lodash.defaultsdeep');
-var path = require('path');
-var webpack = require('webpack');
+let path = require('path');
+let webpack = require('webpack');
 
 // Plugins
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 // PostCss
-var autoprefixer = require('autoprefixer');
-var postcssVars = require('postcss-simple-vars');
-var postcssImport = require('postcss-import');
+let autoprefixer = require('autoprefixer');
+let postcssVars = require('postcss-simple-vars');
+let postcssImport = require('postcss-import');
 
 const STATIC_PATH = process.env.STATIC_PATH || '/static';
-const MONACO_DIR = path.resolve(__dirname, './node_modules/monaco-editor');
+// const MONACO_DIR = path.resolve(__dirname, './node_modules/monaco-editor');
 
 const base = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -29,10 +29,10 @@ const base = {
         filename: '[name].js',
         chunkFilename: 'chunks/[name].js'
     },
-    externals: {
-        React: 'react',
-        ReactDOM: 'react-dom'
-    },
+    // externals: {
+    //     React: 'react',
+    //     ReactDOM: 'react-dom'
+    // },
     resolve: {
         symlinks: false
     },
@@ -62,38 +62,38 @@ const base = {
                 presets: ['@babel/preset-env', '@babel/preset-react']
             }
         },
-        {
-            test: /\.css$/,
-            // exclude: MONACO_DIR,
-            use: [{
-                loader: 'style-loader'
-            }, {
-                loader: 'css-loader',
-                options: {
-                    modules: true,
-                    importLoaders: 1,
-                    localIdentName: '[name]_[local]_[hash:base64:5]',
-                    camelCase: true
-                }
-            }, {
-                loader: 'postcss-loader',
-                options: {
-                    ident: 'postcss',
-                    plugins: function () {
-                        return [
-                            postcssImport,
-                            postcssVars,
-                            autoprefixer
-                        ];
+            {
+                test: /\.css$/,
+                // exclude: MONACO_DIR,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader',
+                    options: {
+                        modules: true,
+                        importLoaders: 1,
+                        localIdentName: '[name]_[local]_[hash:base64:5]',
+                        camelCase: true
                     }
-                }
-            }]
-        }
-        // {
-        //     test: /\.css$/,
-        //     include: MONACO_DIR,
-        //     use: ['style-loader', 'css-loader']
-        // }
+                }, {
+                    loader: 'postcss-loader',
+                    options: {
+                        ident: 'postcss',
+                        plugins: function () {
+                            return [
+                                postcssImport,
+                                postcssVars,
+                                autoprefixer
+                            ];
+                        }
+                    }
+                }]
+            }
+            // {
+            //     test: /\.css$/,
+            //     include: MONACO_DIR,
+            //     use: ['style-loader', 'css-loader']
+            // }
         ]
     },
     optimization: {
@@ -129,10 +129,10 @@ module.exports = [
             path: path.resolve(__dirname, 'build'),
             filename: '[name].js'
         },
-        externals: {
-            React: 'react',
-            ReactDOM: 'react-dom'
-        },
+        // externals: {
+        //     React: 'react',
+        //     ReactDOM: 'react-dom'
+        // },
         module: {
             rules: base.module.rules.concat([
                 {
@@ -155,6 +155,7 @@ module.exports = [
         },
         plugins: base.plugins.concat([
             new webpack.DefinePlugin({
+                // 'process.env.NODE_ENV': 'production',
                 'process.env.NODE_ENV': '"' + process.env.NODE_ENV + '"',
                 'process.env.DEBUG': Boolean(process.env.DEBUG),
                 'process.env.GA_ID': '"' + (process.env.GA_ID || 'UA-000000-01') + '"'
@@ -208,7 +209,7 @@ module.exports = [
         defaultsDeep({}, base, {
             target: 'web',
             entry: {
-                'scratch-arduino-gui': './src/index.js'
+                'scratch-gui': './src/index.js'
             },
             output: {
                 libraryTarget: 'umd',
