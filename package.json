@@ -1,6 +1,6 @@
 {
     "name": "scratch-arduino-gui",
-    "version": "0.9.2",
+    "version": "0.9.3",
     "description": "Graphical User Interface for creating and running Scratch projects",
     "main": "./dist/scratch-gui.js",
     "scripts": {
@@ -33,7 +33,7 @@
     "dependencies": {
         "@huintech/coconut-scratch-l10n": "0.8.2",
         "@huintech/scratch-arduino-blocks": "^0.8.2",
-        "@huintech/scratch-arduino-vm": "0.8.1",
+        "@huintech/scratch-arduino-vm": "^0.8.2",
         "@ramonak/react-progress-bar": "^3.1.0",
         "ansi-to-react": "^6.0.8",
         "arraybuffer-loader": "^1.0.6",
