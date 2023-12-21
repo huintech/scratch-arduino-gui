@@ -18,5 +18,5 @@ npm-*
 /translations
 /locale
 
-# Backup files
+# Backup file
 *-bak*

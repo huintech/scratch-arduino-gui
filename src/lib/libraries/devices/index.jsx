@@ -11,18 +11,9 @@ import unselectDeviceIconURL from './unselectDevice/unselectDevice.png';
 import coconutIconURL from './coconutS/coconut.png';
 import coconutConnectionIconURL from './coconutS/coconut-illustration.svg';
 import coconutConnectionSmallIconURL from './coconutS/coconut-small.svg';
-
-// import ottoRobotBasicIconURL from './ottoRobotBasic/ottorobotbasic.png';
-// import ottoRobotBasicConnectionIconURL from './ottoRobotBasic/ottorobotbasic-illustration.svg';
-// import ottoRobotBasicConnectionSmallIconURL from './ottoRobotBasic/ottorobotbasic-small.svg';
-//
 // import arduinoUnoIconURL from './arduinoUno/arduinoUno.png';
 // import arduinoUnoConnectionIconURL from './arduinoUno/arduinoUno-illustration.svg';
 // import arduinoUnoConnectionSmallIconURL from './arduinoUno/arduinoUno-small.svg';
-//
-// import FastLEDIconURL from './FastLED/FastLED.png';
-// import FastLEDConnectionIconURL from './FastLED/FastLED-illustration.svg';
-// import FastLEDConnectionSmallIconURL from './FastLED/FastLED-small.svg';
 
 const deviceData = [
     /**
@@ -95,81 +86,6 @@ const deviceData = [
         tags: ['robot'],
         helpLink: 'http://coco-nut.kr'
     }
-    // {
-    //     name: 'Otto Robot - Basic',
-    //     deviceId: 'ottoBasic',
-    //     manufactor: 'arduino.cc',
-    //     leanMore: 'https://store.arduino.cc/usa/arduino-uno-rev3',
-    //     type: 'arduino',
-    //     iconURL: ottoRobotBasicIconURL,
-    //     description: (
-    //         <FormattedMessage
-    //             defaultMessage="Otto Robot - Basic, get started with robot project."
-    //             description="Description for the Otto Robot - Basic"
-    //             id="gui.device.OttoRobotBasic.description"
-    //         />
-    //     ),
-    //     featured: true,
-    //     disabled: false,
-    //     bluetoothRequired: false,
-    //     serialportRequired: true,
-    //     defaultBaudRate: '9600',
-    //     internetConnectionRequired: false,
-    //     launchPeripheralConnectionFlow: true,
-    //     useAutoScan: false,
-    //     connectionIconURL: ottoRobotBasicConnectionIconURL,
-    //     connectionSmallIconURL: ottoRobotBasicConnectionSmallIconURL,
-    //     connectingMessage: (
-    //         <FormattedMessage
-    //             defaultMessage="Connecting"
-    //             description="Message to help people connect to their arduino."
-    //             id="gui.device.arduino.connectingMessage"
-    //         />
-    //     ),
-    //     baseToolBoxXml: arduinoBaseToolBox,
-    //     programMode: ['realtime', 'upload'],
-    //     programLanguage: ['block', 'c', 'cpp'],
-    //     tags: ['robot'],
-    //     helpLink: 'http://coco-nut.kr'
-    // },
-    // {
-    //     name: 'LED',
-    //     deviceId: 'FastLED',
-    //     manufactor: 'arduino.cc',
-    //     leanMore: 'https://store.arduino.cc/usa/arduino-nano',
-    //     type: 'arduino',
-    //     boardType: 'Nano',
-    //     iconURL: FastLEDIconURL,
-    //     description: (
-    //         <FormattedMessage
-    //             defaultMessage="The LED Kit, build your LED projects."
-    //             description="Description for the LED device"
-    //             id="gui.device.FastLED.description"
-    //         />
-    //     ),
-    //     featured: true,
-    //     disabled: false,
-    //     bluetoothRequired: false,
-    //     serialportRequired: true,
-    //     defaultBaudRate: '9600',
-    //     internetConnectionRequired: false,
-    //     launchPeripheralConnectionFlow: true,
-    //     useAutoScan: false,
-    //     connectionIconURL: FastLEDConnectionIconURL,
-    //     connectionSmallIconURL: FastLEDConnectionSmallIconURL,
-    //     connectingMessage: (
-    //         <FormattedMessage
-    //             defaultMessage="Connecting"
-    //             description="Message to help people connect to their arduino."
-    //             id="gui.device.arduino.connectingMessage"
-    //         />
-    //     ),
-    //     baseToolBoxXml: arduinoBaseToolBox,
-    //     programMode: ['realtime', 'upload'],
-    //     programLanguage: ['block', 'c', 'cpp'],
-    //     tags: ['kit'],
-    //     helpLink: 'https://store.arduino.cc/usa/arduino-nano'
-    // },
     // {
     //     name: 'Arduino Uno',
     //     deviceId: 'arduinoUno',
