@@ -1,20 +1,10 @@
 import unselectDeviceIcon from '../components/menu-bar/icon--device.svg';
-import ottoBasicIcon from '../lib/libraries/devices/ottoRobotBasic/ottorobotbasic-small.svg';
-import FastLEDIcon from '../lib/libraries/devices/FastLED/FastLED-small.svg';
 import arduinoUnoIcon from '../lib/libraries/devices/arduinoUno/arduinoUno-small.svg';
-import arduinoNanoIcon from '../lib/libraries/devices/arduinoNano/arduinoNano-small.svg';
-import esp32Icon from '../lib/libraries/devices/esp32/esp32-small.svg';
-import esp8266Icon from '../lib/libraries/devices/esp8266/esp8266-small.svg';
 import coconutSIcon from '../lib/libraries/devices/coconutS/coconut-small.svg';
 
 const iconImages = {
-    'coconutS': coconutSIcon,
-    'ottoBasic': ottoBasicIcon,
-    'FastLED': FastLEDIcon,
-    'arduinoUno': arduinoUnoIcon,
-    'arduinoNano': arduinoNanoIcon,
-    'arduinoEsp32': esp32Icon,
-    'arduinoEsp8266': esp8266Icon
+    'coconutS': coconutSIcon
+    // 'arduinoUno': arduinoUnoIcon
 };
 
 const arduinoNanoTypes = [
