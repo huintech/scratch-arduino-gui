@@ -45,7 +45,7 @@ const messages = defineMessages({
 const ROBOT_TAG = {tag: 'Robot', intlLabel: messages.robotTag};
 const KIT_TAG = {tag: 'Kit', intlLabel: messages.kitTag};
 const ARDUINO_TAG = {tag: 'Arduino', intlLabel: messages.arduinoTag};
-const tagListPrefix = [ROBOT_TAG, KIT_TAG, ARDUINO_TAG];
+const tagListPrefix = [ROBOT_TAG]; // [ROBOT_TAG, KIT_TAG, ARDUINO_TAG];
 
 class DeviceLibrary extends React.PureComponent {
     constructor (props) {

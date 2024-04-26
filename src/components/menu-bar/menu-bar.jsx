@@ -111,6 +111,7 @@ import {showAlertWithTimeout} from '../../reducers/alerts';
 
 import arduinoBoardIcon from './icon--arduino-board.svg';
 import uploadFirmware from './icon--upload-firmware.svg';
+import uploadFirmwareIcon from './icon--upload-firmware.svg';
 
 const ariaMessages = defineMessages({
     language: {
@@ -370,6 +371,15 @@ class MenuBar extends React.Component {
         }
     }
     handleDownloadFirmware () {
+        if (this.props.deviceId) {
+            this.props.vm.uploadFirmwareToPeripheral(this.props.deviceId);
+            this.props.onSetRealtimeConnection(false);
+            this.props.onOpenUploadProgress();
+        } else {
+            this.props.onNoPeripheralIsConnected();
+        }
+    }
+    handleUploadFirmware () {
         if (this.props.deviceId) {
             this.props.vm.uploadFirmwareToPeripheral(this.props.deviceId);
             this.props.onSetRealtimeConnection(false);
@@ -822,6 +832,25 @@ class MenuBar extends React.Component {
                             className={classNames(styles.screenShotLogo)}
                             draggable={false}
                             src={screenshotIcon}
+                        />
+                    </div>
+                    <Divider className={classNames(styles.divider)} />
+                    <div
+                        className={classNames(styles.menuBarItem, this.props.isRealtimeMode &&
+                        this.props.peripheralName ? styles.hoverable : styles.disabled)}
+                        onMouseUp={this.props.isRealtimeMode && this.props.peripheralName ?
+                            this.handleDownloadFirmware : null}
+                    >
+                        <img
+                            alt="UploadFirmware"
+                            className={classNames(styles.downloadFirmwareLogo)}
+                            draggable={false}
+                            src={downloadFirmwareIcon}
+                        />
+                        <FormattedMessage
+                            defaultMessage="Upload firmware"
+                            description="Button to upload the firmware"
+                            id="gui.menuBar.uploadFirmware"
                         />
                     </div>
                     {/*<Divider className={classNames(styles.divider)} />*/}
