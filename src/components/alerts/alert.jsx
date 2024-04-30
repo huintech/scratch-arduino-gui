@@ -58,16 +58,29 @@ const AlertComponent = ({
                 extensionMessage ? (
                     extensionMessage
                 ) : (
-                    <FormattedMessage
-                        defaultMessage="Scratch Arduino lost connection to {extensionName}."
-                        description="Message indicating that an extension peripheral has been disconnected"
-                        id="gui.alerts.lostPeripheralConnection"
-                        values={{
-                            extensionName: (
-                                `${extensionName}`
-                            )
-                        }}
-                    />
+                    (typeof extensionName == "object") ? (
+                            <FormattedMessage
+                                defaultMessage="Scratch Arduino lost connection to {extensionName}."
+                                description="Message indicating that an extension peripheral has been disconnected"
+                                id="gui.alerts.lostPeripheralConnection"
+                                values={{
+                                    extensionName: (
+                                        <FormattedMessage id={extensionName.props.id}/>
+                                    )
+                                }}
+                            />
+                            ) : (
+                                <FormattedMessage
+                                    defaultMessage="Scratch Arduino lost connection to {extensionName}."
+                                    description="Message indicating that an extension peripheral has been disconnected"
+                                    id="gui.alerts.lostPeripheralConnection"
+                                    values={{
+                                        extensionName: (
+                                            `${extensionName}`
+                                        )
+                                    }}
+                                />
+                        )
                 )
             ) : content}
         </div>
