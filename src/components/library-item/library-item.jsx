@@ -181,62 +181,62 @@ class LibraryItemComponent extends React.PureComponent {
                         </div>
                     </div>
                 ) : null}
-                {this.props.programMode || this.props.programLanguage ? (
-                    <div className={styles.featuredExtensionMetadataSeconedRow}>
-                        <div className={styles.featuredExtensionProgramMode}>
-                            {this.props.programMode ? (
-                                <div>
-                                    <div>
-                                        <FormattedMessage
-                                            defaultMessage="Program mode"
-                                            description="Label for device program mode"
-                                            id="gui.extensionLibrary.programMode"
-                                        />
-                                    </div>
-                                    <div
-                                        className={styles.featuredExtensionMetadataDetail}
-                                    >
-                                        {this.props.programMode.includes('realtime') ? (
-                                            <img src={prgramModeRealtimeIconURL} />
-                                        ) : null}
-                                        {this.props.programMode.includes('upload') ? (
-                                            <img src={prgramModeUploadIconURL} />
-                                        ) : null}
-                                    </div>
-                                </div>
-                            ) : null}
-                        </div>
-                        <div className={styles.featuredExtensionProgramLanguage}>
-                            {this.props.programLanguage ? (
-                                <div>
-                                    <div>
-                                        <FormattedMessage
-                                            defaultMessage="Program language"
-                                            description="Label for device program language"
-                                            id="gui.extensionLibrary.programLanguage"
-                                        />
-                                    </div>
-                                    <div
-                                        className={styles.featuredExtensionMetadataDetail}
-                                    >
-                                        {this.props.programLanguage.includes('block') ? (
-                                            <img src={prgramLanguageBlockIconURL} />
-                                        ) : null}
-                                        {this.props.programLanguage.includes('c') ? (
-                                            <img src={prgramLanguageCIconURL} />
-                                        ) : null}
-                                        {this.props.programLanguage.includes('cpp') ? (
-                                            <img src={prgramLanguageCppIconURL} />
-                                        ) : null}
-                                        {this.props.programLanguage.includes('python') ? (
-                                            <img src={prgramLanguagePythonIconURL} />
-                                        ) : null}
-                                    </div>
-                                </div>
-                            ) : null}
-                        </div>
-                    </div>
-                ) : null}
+                {/*{this.props.programMode || this.props.programLanguage ? (*/}
+                {/*    <div className={styles.featuredExtensionMetadataSeconedRow}>*/}
+                {/*        <div className={styles.featuredExtensionProgramMode}>*/}
+                {/*            {this.props.programMode ? (*/}
+                {/*                <div>*/}
+                {/*                    <div>*/}
+                {/*                        <FormattedMessage*/}
+                {/*                            defaultMessage="Program mode"*/}
+                {/*                            description="Label for device program mode"*/}
+                {/*                            id="gui.extensionLibrary.programMode"*/}
+                {/*                        />*/}
+                {/*                    </div>*/}
+                {/*                    <div*/}
+                {/*                        className={styles.featuredExtensionMetadataDetail}*/}
+                {/*                    >*/}
+                {/*                        {this.props.programMode.includes('realtime') ? (*/}
+                {/*                            <img src={prgramModeRealtimeIconURL} />*/}
+                {/*                        ) : null}*/}
+                {/*                        {this.props.programMode.includes('upload') ? (*/}
+                {/*                            <img src={prgramModeUploadIconURL} />*/}
+                {/*                        ) : null}*/}
+                {/*                    </div>*/}
+                {/*                </div>*/}
+                {/*            ) : null}*/}
+                {/*        </div>*/}
+                {/*        <div className={styles.featuredExtensionProgramLanguage}>*/}
+                {/*            {this.props.programLanguage ? (*/}
+                {/*                <div>*/}
+                {/*                    <div>*/}
+                {/*                        <FormattedMessage*/}
+                {/*                            defaultMessage="Program language"*/}
+                {/*                            description="Label for device program language"*/}
+                {/*                            id="gui.extensionLibrary.programLanguage"*/}
+                {/*                        />*/}
+                {/*                    </div>*/}
+                {/*                    <div*/}
+                {/*                        className={styles.featuredExtensionMetadataDetail}*/}
+                {/*                    >*/}
+                {/*                        {this.props.programLanguage.includes('block') ? (*/}
+                {/*                            <img src={prgramLanguageBlockIconURL} />*/}
+                {/*                        ) : null}*/}
+                {/*                        {this.props.programLanguage.includes('c') ? (*/}
+                {/*                            <img src={prgramLanguageCIconURL} />*/}
+                {/*                        ) : null}*/}
+                {/*                        {this.props.programLanguage.includes('cpp') ? (*/}
+                {/*                            <img src={prgramLanguageCppIconURL} />*/}
+                {/*                        ) : null}*/}
+                {/*                        {this.props.programLanguage.includes('python') ? (*/}
+                {/*                            <img src={prgramLanguagePythonIconURL} />*/}
+                {/*                        ) : null}*/}
+                {/*                    </div>*/}
+                {/*                </div>*/}
+                {/*            ) : null}*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*) : null}*/}
                 {this.props.leanMore || this.props.helpLink ? (
                     <div className={styles.featuredExtensionMetadataThirdRow}>
                         {this.props.leanMore ? (
