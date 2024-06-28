@@ -78,6 +78,9 @@ const reducer = function (state, action) {
     }
     case SHOW_DEVICE_ALERT: {
         const newList = state.alertsList.slice();
+
+        // TODO: extension name이 object 일 경우
+
         const newAlert = {
             alertType: AlertTypes.EXTENSION,
             closeButton: true,

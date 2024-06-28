@@ -43,13 +43,14 @@ const deviceData = [
         tags: ['realtime']
     },
     {
-        name: (
-            <FormattedMessage
-                defaultMessage="Coconut-S"
-                description="Name for Coconut-S deivce"
-                id="gui.device.coconut.device.name"
-            />
-        ),
+        // name: (
+        //     <FormattedMessage
+        //         defaultMessage="Coconut-S"
+        //         description="Description for the Coconut-S"
+        //         id="gui.device.coconut.device.name"
+        //     />
+        // ),
+        name: 'Coconut-S',
         deviceId: 'coconutS',
         manufactor: 'coco-nut.kr',
         leanMore: 'http://coco-nut.kr',
