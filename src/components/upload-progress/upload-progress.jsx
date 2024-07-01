@@ -33,14 +33,14 @@ const UploadProgressComponent = props => (
     >
         <Box className={styles.body}>
             <Box className={styles.terminalWarper}>
-                <ScrollableFeed
-                    className={styles.terminalText}
-                    forceScroll
-                >
-                    <Ansi>
-                        {props.text}
-                    </Ansi>
-                </ScrollableFeed>
+                {/*<ScrollableFeed*/}
+                {/*    className={styles.terminalText}*/}
+                {/*    forceScroll*/}
+                {/*>*/}
+                {/*    <Ansi>*/}
+                {/*        {props.text}*/}
+                {/*    </Ansi>*/}
+                {/*</ScrollableFeed>*/}
             </Box>
             <Dots
                 className={styles.bottomAreaItem}
